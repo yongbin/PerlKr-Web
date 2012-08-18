@@ -1,0 +1,3 @@
+#!/bin/sh
+
+morbo --watch perlkr-web.conf perlkr-web.pl
