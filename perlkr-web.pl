@@ -24,23 +24,29 @@ __DATA__
 @@ index.html.ep
 % layout 'default';
 % title 'perl.kr - Home of the Perl Korea';
+% for my $link (@$links) {
   <div class="span3 galery">
-    <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
+    <div class="image-galery">
+      <a class="group" rel="group1" href="<%= $link->{image} %>">
+        <img src="<%= $link->{image} %>" />
+      </a>
+    </div>
     <div class="count-galery">
       <h3>
         <i class="icon-certificate"></i>
-        <a href="http://seoul.pm.org">
-          서울 펄 몽거스 / Seoul.pm
+        <a href="<%= $link->{link} %>">
+          <%= $link->{title} %>
         </a>
       </h3>
     </div>
     <div class="tags-galery">
       <p>
         <i class="icon-comment"></i>
-        펄 몽거스는 오프라인 모임을 위주로 운영되는 커뮤니티입니다.
+        <%= $link->{desc} %>
       </p>
     </div>
   </div>
+% }
 
   <div class="span3 galery">
     <div class="menu-galery">
