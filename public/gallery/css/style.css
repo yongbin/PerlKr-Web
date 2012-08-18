@@ -237,8 +237,22 @@
 
 .count-galery{
     height:30px;
-    margin-bottom:5px;
+    width: 225px;
+    margin: 0 auto 10px;
     border-bottom:1px solid #ccc;
+}
+
+.count-galery h3{
+    font-size: 1.2em;
+}
+
+.count-galery h3 a{
+    text-decoration:none;
+}
+
+.count-galery h3 a:hover{
+    color: #555;
+    text-decoration:underline;
 }
 
 .count-galery ul{

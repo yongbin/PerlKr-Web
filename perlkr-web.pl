@@ -24,289 +24,260 @@ __DATA__
 @@ index.html.ep
 % layout 'default';
 % title 'perl.kr - Home of the Perl Korea';
-<div class="container">
-  <div class="row">
-    <div class="span3">
-      <div class="nav-headers">
-        <h3>Find Your Favorite Korean Perl Site from Perl Korea</h3>
+  <div class="span3 galery">
+    <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
+    <div class="count-galery">
+      <h3>
+        <i class="icon-certificate"></i>
+        <a href="http://seoul.pm.org">
+          서울 펄 몽거스 / Seoul.pm
+        </a>
+      </h3>
+    </div>
+    <div class="tags-galery">
+      <p>
+        <i class="icon-comment"></i>
+        펄 몽거스는 오프라인 모임을 위주로 운영되는 커뮤니티입니다.
+      </p>
+    </div>
+  </div>
 
-        <p>
-          펄(Perl)은 텍스트 처리를 위해 Larry Wall이 만든 언어로
-          시스템 관리, 웹프로그래밍, 네트워크 프로그래밍, GUI 개발 등
-          다양한 분야에서 사용하고 있는 범용 프로그래밍 언어입니다.
-        </p>
-
-      </div>
-      <ul class="nav nav-tabs nav-stacked">
-        <li><a href="#"><i class="icon-ok"></i> Perl 설치하기 </a></li>
-        <li><a href="#"><i class="icon-ok"></i> CPAN 사용하기 </a></li>
-        <li><a href="#"><i class="icon-ok"></i> Perl 도서 </a></li>
-        <li><a href="#"><i class="icon-ok"></i> 오프라인 모임 </a></li>
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
       </ul>
     </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
-        <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
-      </div>
+    <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/3_b.jpg"><img src="/gallery/img/3_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
     </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/3_b.jpg"><img src="/gallery/img/3_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sun</a>, <a href="#">Sunrise</a>,
-        <a href="#">Dawn</a>, <a href="#">Morning</a>, <a href="#">Landscape</a></p>
-      </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Sun</a>, <a href="#">Sunrise</a>,
+      <a href="#">Dawn</a>, <a href="#">Morning</a>, <a href="#">Landscape</a></p>
     </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/1_b.jpg"><img src="/gallery/img/1_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Tree</a>, <a href="#">Landscape</a>,
-        <a href="#">Forest</a>, <a href="#">Nature</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images1" href="/gallery/img/5_b.jpg"><img src="/gallery/img/5_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Home</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images2" href="/gallery/img/2_b.jpg"><img src="/gallery/img/2_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sea</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images3" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
-        <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images4" href="/gallery/img/3_b.jpg"><img src="/gallery/img/3_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sun</a>, <a href="#">Sunrise</a>,
-        <a href="#">Dawn</a>, <a href="#">Morning</a>, <a href="#">Landscape</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="wheel_group" href="/gallery/img/1_b.jpg"><img src="/gallery/img/1_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Tree</a>, <a href="#">Landscape</a>,
-        <a href="#">Forest</a>, <a href="#">Nature</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a rel="wheel_group" href="/gallery/img/5_b.jpg"><img src="/gallery/img/5_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Home</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a rel="wheel_group" href="/gallery/img/2_b.jpg"><img src="/gallery/img/2_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sea</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images3" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
-        <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
-      </div>
-    </div>
-
   </div>
-</div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/1_b.jpg"><img src="/gallery/img/1_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Tree</a>, <a href="#">Landscape</a>,
+      <a href="#">Forest</a>, <a href="#">Nature</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="images1" href="/gallery/img/5_b.jpg"><img src="/gallery/img/5_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Home</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="images2" href="/gallery/img/2_b.jpg"><img src="/gallery/img/2_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Sea</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="images3" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
+      <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="images4" href="/gallery/img/3_b.jpg"><img src="/gallery/img/3_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Sun</a>, <a href="#">Sunrise</a>,
+      <a href="#">Dawn</a>, <a href="#">Morning</a>, <a href="#">Landscape</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="group" rel="wheel_group" href="/gallery/img/1_b.jpg"><img src="/gallery/img/1_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Tree</a>, <a href="#">Landscape</a>,
+      <a href="#">Forest</a>, <a href="#">Nature</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a rel="wheel_group" href="/gallery/img/5_b.jpg"><img src="/gallery/img/5_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Home</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a rel="wheel_group" href="/gallery/img/2_b.jpg"><img src="/gallery/img/2_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Sea</a></p>
+    </div>
+  </div>
+
+  <div class="span3 galery">
+    <div class="menu-galery">
+      <ul>
+        <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
+        <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
+        <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
+      </ul>
+    </div>
+    <div class="image-galery"><a class="images3" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
+    <div class="count-galery">
+      <ul>
+        <li><i class="icon-comment"></i> 5</li>
+        <li><i class="icon-download-alt"></i> 7</li>
+        <li><i class="icon-star"></i> 2</li>
+        <li><i class="icon-eye-open"></i> 20</li>
+      </ul>
+    </div>
+    <div class="tags-galery">
+      <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
+      <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
+    </div>
+  </div>
+
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
@@ -319,14 +290,14 @@ __DATA__
 
   <body>
     <div id="wrapper" class="clearfix">
-      %= include 'layouts/header'
       %= include 'layouts/nav'
 
-      <div id="content">
-        <div class="container">
+      <div class="container">
+        <div class="row">
+          %= include 'layouts/header'
           <%= content %>
-        </div> <!-- /container -->
-      </div> <!-- /content -->
+        </div> <!-- /row -->
+      </div> <!-- /container -->
 
       %= include 'layouts/footer'
     </div> <!-- /wrapper -->
@@ -370,11 +341,24 @@ __DATA__
 
 
 @@ layouts/header.html.ep
-<div id="header">
-  <div class="container">
-    <h1 id="title"> <a href="/"> </a> </h1>
-  </div> <!-- /container -->
-</div> <!-- /header -->
+<div id="header" class="span3">
+  <div class="nav-headers">
+    <h3>Visit Popular Korean Perl Site from Perl Korea</h3>
+
+    <p>
+      펄(Perl)은 텍스트 처리를 위해 Larry Wall이 만든 언어로
+      시스템 관리, 웹프로그래밍, 네트워크 프로그래밍, GUI 개발 등
+      다양한 분야에서 사용하고 있는 범용 프로그래밍 언어입니다.
+    </p>
+
+  </div>
+  <ul class="nav nav-tabs nav-stacked">
+    <li><a href="/"><i class="icon-ok"></i> 처음으로 </a></li>
+    <li><a href="#"><i class="icon-ok"></i> Perl 설치하기 </a></li>
+    <li><a href="#"><i class="icon-ok"></i> CPAN 사용하기 </a></li>
+    <li><a href="#"><i class="icon-ok"></i> Perl 도서 </a></li>
+  </ul>
+</div>
 
 
 @@ layouts/footer.html.ep
