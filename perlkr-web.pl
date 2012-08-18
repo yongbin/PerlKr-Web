@@ -28,16 +28,20 @@ __DATA__
   <div class="row">
     <div class="span3">
       <div class="nav-headers">
-        <h3>Find Your Favorite Perl Site from Perl Korea</h3>
+        <h3>Find Your Favorite Korean Perl Site from Perl Korea</h3>
+
+        <p>
+          펄(Perl)은 텍스트 처리를 위해 Larry Wall이 만든 언어로
+          시스템 관리, 웹프로그래밍, 네트워크 프로그래밍, GUI 개발 등
+          다양한 분야에서 사용하고 있는 범용 프로그래밍 언어입니다.
+        </p>
+
       </div>
       <ul class="nav nav-tabs nav-stacked">
-        <li class="active"><a href="#"><i class="icon-picture"></i> Newest</a></li>
-        <li><a href="#"><i class="icon-ok"></i> Popular</a></li>
-        <li><a href="#"><i class="icon-certificate"></i> Top Sites</a></li>
-        <li><a href="#"><i class="icon-bookmark"></i> Most Viewed</a></li>
-        <li><a href="#"><i class="icon-th-list"></i> Categories</a></li>
-        <li><a href="#"><i class="icon-download"></i> Most Download</a></li>
-        <li><a href="#"><i class="icon-heart"></i> Recomended</a></li>
+        <li><a href="#"><i class="icon-ok"></i> Perl 설치하기 </a></li>
+        <li><a href="#"><i class="icon-ok"></i> CPAN 사용하기 </a></li>
+        <li><a href="#"><i class="icon-ok"></i> Perl 도서 </a></li>
+        <li><a href="#"><i class="icon-ok"></i> 오프라인 모임 </a></li>
       </ul>
     </div>
 
@@ -403,27 +407,12 @@ __DATA__
           <li class="divider-vertical"></li>
           <li><a href="about.html">About</a></li>
           <li class="divider-vertical"></li>
-          <form class="navbar-search pull-left" action="">
-            <input type="text" class="search-query span2" placeholder="Search" required>
-          </form>
-          <li class="divider-vertical"></li>
         </ul>
         <ul class="nav pull-right">
           <li class="divider-vertical"></li>
-          <li><a href="signin.html"><i class="icon-lock"></i> Sign in</a></li>
+          <li><a href="signin.html"> Twitter </a></li>
           <li class="divider-vertical"></li>
-          <li><a href="signup.html"><i class="icon-edit"></i> Sign up</a></li>
-          <li class="divider-vertical"></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
+          <li><a href="signup.html"> Facebook </a></li>
           <li class="divider-vertical"></li>
         </ul>
       </div><!--/.nav-collapse -->

@@ -142,6 +142,7 @@
 
 .nav-tabs.nav-stacked > li > a {
   background:#fff;
+  padding-left: 20px;
 }
 
 .nav-tabs.nav-stacked > li > a:hover {
@@ -163,12 +164,18 @@
     background:#fff;
     border:1px solid #ccc;
     border-bottom: none;
-    height:105px;
+    height:200px;
     padding:15px;
 }
 
 .nav-headers h3{
     font-weight:lighter;
+}
+
+.nav-headers p{
+    font-weight:lighter;
+    line-height: 1.75em;
+    padding:15px;
 }
 
 /* .: GALERI :. */
