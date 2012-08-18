@@ -136,12 +136,6 @@ __DATA__
   <hr class="alt" />
   <div class="row">
     <div class="span6">&copy; <%= $copyright %>. All right reserved.</div>
-    <div class="span6">
-      <ul>
-        <li><a href="#">Terms Of Service</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-    </div>
   </div>
 </div>
 
