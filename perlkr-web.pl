@@ -157,3 +157,54 @@ __DATA__
     </div>
   </div>
 </div>
+
+
+@@ layouts/error.html.ep
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>perl.kr - <%= title %></title>
+    %= include 'layouts/head-load'
+  </head>
+
+  <body>
+    <div id="wrapper" class="clearfix">
+      %= include 'layouts/nav'
+
+      <div class="error-container">
+        <h1>Oops!</h1>
+
+        <%= content %>
+
+        <div class="error-actions">
+          <a href="./" class="btn btn-large btn-primary">
+            <i class="icon-chevron-left"></i>
+            &nbsp;
+            Back to perl.kr
+          </a>
+          <a href="./" class="btn btn-large">
+            <i class="icon-envelope"></i>
+            &nbsp;
+            Contact Support
+          </a>
+        </div> <!-- /error-actions -->
+
+      </div> <!-- /error-container -->
+
+      %= include 'layouts/footer'
+    </div> <!-- /wrapper -->
+
+    %= include 'layouts/body-load'
+  </body>
+</html>
+
+
+@@ not_found.html.ep
+% layout 'error';
+% title '404 Not Found';
+<h2>404 Not Found</h2>
+
+<div class="error-details">
+  Sorry, an error has occured, Requested page not found!
+</div> <!-- /error-details -->
