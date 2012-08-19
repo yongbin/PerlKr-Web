@@ -150,11 +150,8 @@ __DATA__
           <li class="divider-vertical"></li>
         </ul>
         <ul class="nav pull-right">
-          <li class="divider-vertical"></li>
-          <li><a href="signin.html"> Twitter </a></li>
-          <li class="divider-vertical"></li>
-          <li><a href="signup.html"> Facebook </a></li>
-          <li class="divider-vertical"></li>
+          <li><a href="<%= $twitter %>"> Twitter </a></li>
+          <li><a href="<%= $facebook %>"> Facebook </a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
