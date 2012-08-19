@@ -57,6 +57,13 @@
   border-right: 1px solid #ccc !important;
 }
 
+.navbar .nav > li {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid #fff !important;
+  border-left: 1px solid #ccc !important;
+}
+
 .navbar .nav > li > a {
   float: none;
   padding: 9px 10px 11px;
@@ -84,6 +91,10 @@
   text-decoration: none;
   background:none;
   /*background-color: #222222;*/
+}
+
+.navbar-search {
+  padding-left: 10px;
 }
 
 .navbar-search .search-query {
@@ -140,6 +151,10 @@
 
 /* .: SIDEBAR MENU :. */
 
+#header > ul.nav {
+  margin-bottom: 0;
+}
+
 .nav-tabs.nav-stacked > li > a {
   background:#fff;
   padding-left: 20px;
@@ -160,11 +175,20 @@
           border-radius: 0 !important;
 }
 
+#tiles {
+    position: relative;
+    margin: 0;
+}
+#tiles > li {
+    width: 280px;
+    margin: 0;
+    list-style-type: none;
+}
+
 .nav-headers{
     background:#fff;
     border:1px solid #ccc;
     border-bottom: none;
-    height:200px;
     padding:15px;
 }
 
@@ -185,8 +209,6 @@
     -moz-box-shadow:0 0 1px 1px #ccc;
     -o-box-shadow:0 0 1px 1px #ccc;
     -webkit-box-shadow:0 0 1px 1px #ccc;
-    height:400px;
-    margin-bottom:30px;
     background:#fff;
 }
 
@@ -224,9 +246,9 @@
 
 .image-galery{
     border: 1px solid #fafafa;
-    width: 225px;
-    height:210px;
-    margin: 20px auto;
+    width: 235px;
+    height:220px;
+    padding: 20px;
 }
 
 .image-galery img{
@@ -236,9 +258,7 @@
 }
 
 .count-galery{
-    height:30px;
-    width: 225px;
-    margin: 0 auto 10px;
+    margin: 0 20px 10px 20px;
     border-bottom:1px solid #ccc;
 }
 
@@ -249,7 +269,6 @@
 .count-galery h3 a{
     text-decoration:none;
 }
-
 .count-galery h3 a:hover{
     color: #555;
     text-decoration:underline;
@@ -266,8 +285,8 @@
 }
 
 .tags-galery{
-    width: 225px;
-    margin: 5px auto;
+    padding: 5px 20px 20px 20px;
+    width: 235px;
 }
 
 .tags-galery a{
@@ -285,6 +304,7 @@
 
 .footer{
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .footer ul{
@@ -298,13 +318,12 @@
 }
 
 .footer ul li a{
-    margin-left: 15px;
     color: #222;
-    text-decoration:underline;
+    text-decoration:none;
 }
 
 .footer ul li a:hover{
-    text-decoration:none;
+    text-decoration:underline;
 }
 
 

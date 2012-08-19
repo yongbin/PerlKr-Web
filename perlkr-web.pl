@@ -20,32 +20,34 @@ app->defaults(%DEFAULT_STASH);
 app->start;
 
 __DATA__
-
 @@ index.html.ep
 % layout 'default';
 % title 'Home of the Perl Korea';
+
 % for my $link (@$perl_sites) {
-  <div class="span3 galery">
-    <div class="image-galery">
-      <a class="group" rel="group1" href="<%= $link->{image} %>">
-        <img src="<%= $link->{image} %>" />
-      </a>
-    </div>
-    <div class="count-galery">
-      <h3>
-        <i class="icon-certificate"></i>
-        <a href="<%= $link->{url} %>">
-          <%= $link->{title} %>
+  <li>
+    <div class="galery">
+      <div class="image-galery">
+        <a class="group" rel="group1" href="<%= $link->{image} %>">
+          <img src="<%= $link->{image} %>" />
         </a>
-      </h3>
+      </div>
+      <div class="count-galery">
+        <h3>
+          <i class="icon-certificate"></i>
+          <a href="<%= $link->{url} %>">
+            <%= $link->{title} %>
+          </a>
+        </h3>
+      </div>
+      <div class="tags-galery">
+        <p>
+          <i class="icon-comment"></i>
+          <%= $link->{desc} %>
+        </p>
+      </div>
     </div>
-    <div class="tags-galery">
-      <p>
-        <i class="icon-comment"></i>
-        <%= $link->{desc} %>
-      </p>
-    </div>
-  </div>
+  </li>
 % }
 
 
@@ -63,9 +65,13 @@ __DATA__
       %= include 'layouts/nav'
 
       <div class="container">
-        <div class="row">
-          %= include 'layouts/header'
-          <%= content %>
+        <div class="row" id="wookmark">
+          <ul id="tiles">
+
+            %= include 'layouts/header'
+            <%= content %>
+
+          </ul>
         </div> <!-- /row -->
       </div> <!-- /container -->
 
@@ -109,19 +115,33 @@ __DATA__
 <script src="/gallery/js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script src="/gallery/source/jquery.fancybox.js"></script>
 
+<!-- like pinterest layout using wookmark -->
+<script src="/wookmark/jquery.wookmark.min.js"></script>
+<script type="text/javascript">
+      // Call the layout function.
+      $('#tiles > li').wookmark({
+        autoResize: true,          // This will auto-update the layout when the browser window is resized.
+        container: $('#wookmark'), // Optional, used for some extra CSS styling
+        offset: 20,                 // Optional, the distance between grid items
+        itemWidth: 280             // Optional, the width of a grid item
+      });
+</script>
+
 
 @@ layouts/header.html.ep
-<div id="header">
-  <div class="nav-headers">
-    <h3><%= $header_title %></h3>
-    <p> <%= $header_desc %> </p>
+<li>
+  <div id="header">
+    <div class="nav-headers">
+      <h3><%= $header_title %></h3>
+      <p> <%= $header_desc %> </p>
+    </div>
+    <ul class="nav nav-tabs nav-stacked">
+      % for my $link (@$header_links) {
+        <li><a href="<%= $link->{url} %>"><i class="icon-ok"></i> <%= $link->{title} %> </a></li>
+      % }
+    </ul>
   </div>
-  <ul class="nav nav-tabs nav-stacked">
-    % for my $link (@$header_links) {
-      <li><a href="<%= $link->{url} %>"><i class="icon-ok"></i> <%= $link->{title} %> </a></li>
-    % }
-  </ul>
-</div>
+</li>
 
 
 @@ layouts/footer.html.ep
