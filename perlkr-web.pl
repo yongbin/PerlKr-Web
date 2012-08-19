@@ -128,7 +128,12 @@ __DATA__
 <div class="container footer">
   <hr class="alt" />
   <div class="row">
-    <div class="span6">&copy; <%= $copyright %>. All right reserved.</div>
+    <div class="span6">&copy; <%= $copyright %>. All Rights Reserved.</div>
+    <div class="span6">
+      <ul>
+        <li>Built by <a href="http://www.perl.org/">Perl</a> &amp; <a href="http://mojolicio.us/">Mojolicious</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
