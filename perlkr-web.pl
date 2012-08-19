@@ -24,7 +24,7 @@ __DATA__
 @@ index.html.ep
 % layout 'default';
 % title 'perl.kr - Home of the Perl Korea';
-% for my $link (@$links) {
+% for my $link (@$perl_sites) {
   <div class="span3 galery">
     <div class="image-galery">
       <a class="group" rel="group1" href="<%= $link->{image} %>">
@@ -34,7 +34,7 @@ __DATA__
     <div class="count-galery">
       <h3>
         <i class="icon-certificate"></i>
-        <a href="<%= $link->{link} %>">
+        <a href="<%= $link->{url} %>">
           <%= $link->{title} %>
         </a>
       </h3>
