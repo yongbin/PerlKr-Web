@@ -111,22 +111,15 @@ __DATA__
 
 
 @@ layouts/header.html.ep
-<div id="header" class="span3">
+<div id="header">
   <div class="nav-headers">
-    <h3>Visit Popular Korean Perl Site from Perl Korea</h3>
-
-    <p>
-      펄(Perl)은 텍스트 처리를 위해 Larry Wall이 만든 언어로
-      시스템 관리, 웹프로그래밍, 네트워크 프로그래밍, GUI 개발 등
-      다양한 분야에서 사용하고 있는 범용 프로그래밍 언어입니다.
-    </p>
-
+    <h3><%= $header_title %></h3>
+    <p> <%= $header_desc %> </p>
   </div>
   <ul class="nav nav-tabs nav-stacked">
-    <li><a href="/"><i class="icon-ok"></i> 처음으로 </a></li>
-    <li><a href="#"><i class="icon-ok"></i> Perl 설치하기 </a></li>
-    <li><a href="#"><i class="icon-ok"></i> CPAN 사용하기 </a></li>
-    <li><a href="#"><i class="icon-ok"></i> Perl 도서 </a></li>
+    % for my $link (@$header_links) {
+      <li><a href="<%= $link->{url} %>"><i class="icon-ok"></i> <%= $link->{title} %> </a></li>
+    % }
   </ul>
 </div>
 
