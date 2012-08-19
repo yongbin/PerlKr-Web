@@ -23,7 +23,7 @@ __DATA__
 
 @@ index.html.ep
 % layout 'default';
-% title 'perl.kr - Home of the Perl Korea';
+% title 'Home of the Perl Korea';
 % for my $link (@$perl_sites) {
   <div class="span3 galery">
     <div class="image-galery">
@@ -54,7 +54,7 @@ __DATA__
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+    <title>perl.kr - <%= title %></title>
     %= include 'layouts/head-load'
   </head>
 
