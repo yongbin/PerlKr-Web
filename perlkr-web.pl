@@ -150,9 +150,13 @@ __DATA__
       <a class="brand" href="/"><img src="/gallery/img/logo.png" alt="<%= $project_name %>" /></a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="divider-vertical"></li>
           <li><a href="about.html">About</a></li>
-          <li class="divider-vertical"></li>
+          <li>
+            <form class="navbar-search pull-left" action="http://www.google.com/cse" id="searchbox_009035706704064932538:p1hkg-zoke4">
+              <input type="hidden" name="cx" value="009035706704064932538:p1hkg-zoke4" />
+              <input type="text" class="search-query span2" placeholder="Search" required name="q" />
+            </form>
+          </li>
         </ul>
         <ul class="nav pull-right">
           <li><a href="<%= $twitter %>"> Twitter </a></li>
