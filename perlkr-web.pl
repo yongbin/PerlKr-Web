@@ -170,7 +170,9 @@ __DATA__
       <a class="brand" href="/"><img src="/gallery/img/logo.png" alt="<%= $project_name %>" /></a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li><a href="about.html">About</a></li>
+            % for my $link (@$header_links) {
+                <li><a href="<%= $link->{url} %>"> <%= $link->{title} %> </a></li>
+            % }
           <li>
             <form class="navbar-search pull-left" action="http://www.google.com/cse" id="searchbox_009035706704064932538:p1hkg-zoke4">
               <input type="hidden" name="cx" value="009035706704064932538:p1hkg-zoke4" />
