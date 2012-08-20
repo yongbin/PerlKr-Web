@@ -80,6 +80,19 @@ __DATA__
 
     %= include 'layouts/body-load'
   </body>
+  
+  <!-- google analytics -->
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-360858-5");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+  <!-- google analytics -->
+  
 </html>
 
 
@@ -87,6 +100,7 @@ __DATA__
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
+<meta name="verify-v1" content="J4/HArGFld3FzWJ406poZ3byQKb2vhQ5kYt2Zriqh4g=" />
 
 <!-- Le styles -->
 <link href="/gallery/css/bootstrap.css" rel="stylesheet">
@@ -102,7 +116,7 @@ __DATA__
 
 <!-- Le fav and touch icons -->
 <link rel="shortcut icon" href="/gallery/img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/gallery/img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 
 @@ layouts/body-load.html.ep
@@ -156,7 +170,6 @@ __DATA__
     </div>
   </div>
 </div>
-
 
 @@ layouts/nav.html.ep
 <div class="navbar navbar-fixed-top">
