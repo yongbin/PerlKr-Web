@@ -20,309 +20,60 @@ app->defaults(%DEFAULT_STASH);
 app->start;
 
 __DATA__
-
 @@ index.html.ep
 % layout 'default';
-% title 'perl.kr - Home of the Perl Korea';
-<div class="container">
-  <div class="row">
-    <div class="span3">
-      <div class="nav-headers">
-        <h3>Find Your Favorite Perl Site from Perl Korea</h3>
-      </div>
-      <ul class="nav nav-tabs nav-stacked">
-        <li class="active"><a href="#"><i class="icon-picture"></i> Newest</a></li>
-        <li><a href="#"><i class="icon-ok"></i> Popular</a></li>
-        <li><a href="#"><i class="icon-certificate"></i> Top Sites</a></li>
-        <li><a href="#"><i class="icon-bookmark"></i> Most Viewed</a></li>
-        <li><a href="#"><i class="icon-th-list"></i> Categories</a></li>
-        <li><a href="#"><i class="icon-download"></i> Most Download</a></li>
-        <li><a href="#"><i class="icon-heart"></i> Recomended</a></li>
-      </ul>
-    </div>
+% title 'Home of the Perl Korea';
 
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
+% for my $link (@$perl_sites) {
+  <li>
+    <div class="galery">
+      <div class="image-galery">
+        <a class="group" rel="group1" href="<%= $link->{image} %>">
+          <img src="<%= $link->{image} %>" />
+        </a>
       </div>
-      <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
       <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
+        <h3>
+          <i class="icon-certificate"></i>
+          <a href="<%= $link->{url} %>">
+            <%= $link->{title} %>
+          </a>
+        </h3>
       </div>
       <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
-        <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
+        <p>
+          <i class="icon-comment"></i>
+          <%= $link->{desc} %>
+        </p>
       </div>
     </div>
+  </li>
+% }
 
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/3_b.jpg"><img src="/gallery/img/3_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sun</a>, <a href="#">Sunrise</a>,
-        <a href="#">Dawn</a>, <a href="#">Morning</a>, <a href="#">Landscape</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="group1" href="/gallery/img/1_b.jpg"><img src="/gallery/img/1_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Tree</a>, <a href="#">Landscape</a>,
-        <a href="#">Forest</a>, <a href="#">Nature</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images1" href="/gallery/img/5_b.jpg"><img src="/gallery/img/5_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Home</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images2" href="/gallery/img/2_b.jpg"><img src="/gallery/img/2_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sea</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images3" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
-        <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images4" href="/gallery/img/3_b.jpg"><img src="/gallery/img/3_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sun</a>, <a href="#">Sunrise</a>,
-        <a href="#">Dawn</a>, <a href="#">Morning</a>, <a href="#">Landscape</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="group" rel="wheel_group" href="/gallery/img/1_b.jpg"><img src="/gallery/img/1_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Tree</a>, <a href="#">Landscape</a>,
-        <a href="#">Forest</a>, <a href="#">Nature</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a rel="wheel_group" href="/gallery/img/5_b.jpg"><img src="/gallery/img/5_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Home</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a rel="wheel_group" href="/gallery/img/2_b.jpg"><img src="/gallery/img/2_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Sea</a></p>
-      </div>
-    </div>
-
-    <div class="span3 galery">
-      <div class="menu-galery">
-        <ul>
-          <li><a href="detail.html" rel="tooltip" title="Detail"><i class="iconbig-search"></i></a></li>
-          <li><a href="detail.html" rel="tooltip" title="Add Comment"><i class="iconbig-speak"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Download"><i class="iconbig-download"></i></a></li>
-          <li><a href="#" rel="tooltip" title="Like"><i class="iconbig-black-star"></i></a></li>
-        </ul>
-      </div>
-      <div class="image-galery"><a class="images3" href="/gallery/img/4_b.jpg"><img src="/gallery/img/4_b.jpg" /></a></div>
-      <div class="count-galery">
-        <ul>
-          <li><i class="icon-comment"></i> 5</li>
-          <li><i class="icon-download-alt"></i> 7</li>
-          <li><i class="icon-star"></i> 2</li>
-          <li><i class="icon-eye-open"></i> 20</li>
-        </ul>
-      </div>
-      <div class="tags-galery">
-        <p><i class="icon-tags"></i> Tags : <a href="#">Building</a>, <a href="#">Tower</a>,
-        <a href="#">Eifel</a>, <a href="#">Wonders of the world</a>, <a href="#">Miracle</a></p>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+    <title>perl.kr - <%= title %></title>
     %= include 'layouts/head-load'
   </head>
 
   <body>
     <div id="wrapper" class="clearfix">
-      %= include 'layouts/header'
       %= include 'layouts/nav'
 
-      <div id="content">
-        <div class="container">
-          <%= content %>
-        </div> <!-- /container -->
-      </div> <!-- /content -->
+      <div class="container">
+        <div class="row" id="wookmark">
+          <ul id="tiles">
+
+            %= include 'layouts/header'
+            <%= content %>
+
+          </ul>
+        </div> <!-- /row -->
+      </div> <!-- /container -->
 
       %= include 'layouts/footer'
     </div> <!-- /wrapper -->
@@ -364,24 +115,43 @@ __DATA__
 <script src="/gallery/js/jquery.mousewheel-3.0.6.pack.js"></script>
 <script src="/gallery/source/jquery.fancybox.js"></script>
 
+<!-- like pinterest layout using wookmark -->
+<script src="/wookmark/jquery.wookmark.min.js"></script>
+<script type="text/javascript">
+      // Call the layout function.
+      $('#tiles > li').wookmark({
+        autoResize: true,          // This will auto-update the layout when the browser window is resized.
+        container: $('#wookmark'), // Optional, used for some extra CSS styling
+        offset: 20,                 // Optional, the distance between grid items
+        itemWidth: 280             // Optional, the width of a grid item
+      });
+</script>
+
 
 @@ layouts/header.html.ep
-<div id="header">
-  <div class="container">
-    <h1 id="title"> <a href="/"> </a> </h1>
-  </div> <!-- /container -->
-</div> <!-- /header -->
+<li>
+  <div id="header">
+    <div class="nav-headers">
+      <h3><%= $header_title %></h3>
+      <p> <%= $header_desc %> </p>
+    </div>
+    <ul class="nav nav-tabs nav-stacked">
+      % for my $link (@$header_links) {
+        <li><a href="<%= $link->{url} %>"><i class="icon-ok"></i> <%= $link->{title} %> </a></li>
+      % }
+    </ul>
+  </div>
+</li>
 
 
 @@ layouts/footer.html.ep
 <div class="container footer">
   <hr class="alt" />
   <div class="row">
-    <div class="span6">&copy; <%= $copyright %>. All right reserved.</div>
+    <div class="span6">&copy; <%= $copyright %>. All Rights Reserved.</div>
     <div class="span6">
       <ul>
-        <li><a href="#">Terms Of Service</a></li>
-        <li><a href="#">Privacy</a></li>
+        <li>Built by <a href="http://www.perl.org/">Perl</a> &amp; <a href="http://mojolicio.us/">Mojolicious</a></li>
       </ul>
     </div>
   </div>
@@ -400,33 +170,72 @@ __DATA__
       <a class="brand" href="/"><img src="/gallery/img/logo.png" alt="<%= $project_name %>" /></a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="divider-vertical"></li>
-          <li><a href="about.html">About</a></li>
-          <li class="divider-vertical"></li>
-          <form class="navbar-search pull-left" action="">
-            <input type="text" class="search-query span2" placeholder="Search" required>
-          </form>
-          <li class="divider-vertical"></li>
+            % for my $link (@$header_links) {
+                <li><a href="<%= $link->{url} %>"> <%= $link->{title} %> </a></li>
+            % }
+          <li>
+            <form class="navbar-search pull-left" action="http://www.google.com/cse" id="searchbox_009035706704064932538:p1hkg-zoke4">
+              <input type="hidden" name="cx" value="009035706704064932538:p1hkg-zoke4" />
+              <input type="text" class="search-query span2" placeholder="Search" required name="q" />
+            </form>
+          </li>
         </ul>
         <ul class="nav pull-right">
-          <li class="divider-vertical"></li>
-          <li><a href="signin.html"><i class="icon-lock"></i> Sign in</a></li>
-          <li class="divider-vertical"></li>
-          <li><a href="signup.html"><i class="icon-edit"></i> Sign up</a></li>
-          <li class="divider-vertical"></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-          <li class="divider-vertical"></li>
+          <li><a href="<%= $twitter %>"> Twitter </a></li>
+          <li><a href="<%= $facebook %>"> Facebook </a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
 </div>
+
+
+@@ layouts/error.html.ep
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>perl.kr - <%= title %></title>
+    %= include 'layouts/head-load'
+  </head>
+
+  <body>
+    <div id="wrapper" class="clearfix">
+      %= include 'layouts/nav'
+
+      <div class="error-container">
+        <h1>Oops!</h1>
+
+        <%= content %>
+
+        <div class="error-actions">
+          <a href="./" class="btn btn-large btn-primary">
+            <i class="icon-chevron-left"></i>
+            &nbsp;
+            Back to perl.kr
+          </a>
+          <a href="./" class="btn btn-large">
+            <i class="icon-envelope"></i>
+            &nbsp;
+            Contact Support
+          </a>
+        </div> <!-- /error-actions -->
+
+      </div> <!-- /error-container -->
+
+      %= include 'layouts/footer'
+    </div> <!-- /wrapper -->
+
+    %= include 'layouts/body-load'
+  </body>
+</html>
+
+
+@@ not_found.html.ep
+% layout 'error';
+% title '404 Not Found';
+<h2>404 Not Found</h2>
+
+<div class="error-details">
+  Sorry, an error has occured, Requested page not found!
+</div> <!-- /error-details -->
