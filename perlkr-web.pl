@@ -20,10 +20,10 @@ get '/' => 'index';
 app->defaults(%DEFAULT_STASH);
 
 builder {
-	enable 'Expires',
-		content_type => [ 'text/css', 'application/javascript', qr!^image/! ],
-		expires => 'access plus 1 months';
-	app->start;
+    enable 'Expires',
+        content_type => [ 'text/css', 'application/javascript', qr!^image/! ],
+        expires => 'access plus 1 months';
+    app->start;
 };
 
 __DATA__
