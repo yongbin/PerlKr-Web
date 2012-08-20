@@ -3,6 +3,7 @@
 use utf8;
 
 use Mojolicious::Lite;
+use Plack::Builder;
 
 use Const::Fast;
 
@@ -17,7 +18,13 @@ plugin 'PODRenderer';
 get '/' => 'index';
 
 app->defaults(%DEFAULT_STASH);
-app->start;
+
+builder {
+	enable 'Expires',
+		content_type => [ 'text/css', 'application/javascript', qr!^image/! ],
+		expires => 'access plus 1 months';
+	app->start;
+};
 
 __DATA__
 @@ index.html.ep
