@@ -24,3 +24,10 @@ apache 설정
         ErrorLog         /var/log/apache2/perl.kr/error_log
         CustomLog        /var/log/apache2/perl.kr/access_log combined
     </VirtualHost>
+
+또한 아파치는 모르는 확장자에 대해서는 `text/plain`으로
+보내므로 캐싱을 위해 폰트 관련 타입을 추가로 설정 합니다.
+
+    AddType application/vnd.bw-fontobject .eot
+    AddType application/x-font-ttf .ttf
+    AddType application/x-woff .woff
