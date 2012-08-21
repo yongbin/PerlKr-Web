@@ -17,14 +17,23 @@ plugin 'PODRenderer';
 
 get '/' => 'index';
 
-app->defaults(%DEFAULT_STASH);
-
 builder {
-	enable 'Expires',
-		content_type => [ 'text/css', 'application/javascript', qr!^image/! ],
-		expires => 'access plus 1 months';
-	app->start;
+    enable 'Expires',
+        content_type => [
+            'application/javascript',
+            'application/vnd.bw-fontobject',  # eot
+            'application/x-font-ttf',         # ttf
+            'application/x-woff',             # woff
+            'text/css',
+            qr{^image/},
+        ],
+        expires => 'access plus 1 months';
+
+    app;
 };
+
+app->defaults(%DEFAULT_STASH);
+app->start;
 
 __DATA__
 @@ index.html.ep
@@ -36,7 +45,7 @@ __DATA__
     <div class="galery">
       <div class="image-galery">
         <a class="group" rel="group1" href="<%= $link->{image} %>">
-          <img src="<%= $link->{image} %>" />
+          <img src="<%= $link->{image} %>?<%= $cache_ver %>" />
         </a>
       </div>
       <div class="count-galery">
@@ -96,34 +105,34 @@ __DATA__
 <meta name="author" content="">
 
 <!-- Le styles -->
-<link href="/gallery/css/bootstrap.css" rel="stylesheet">
-<link href="/gallery/css/style.css" rel="stylesheet">
-<link href="/gallery/css/icon-style.css" rel="stylesheet">
-<link href="/gallery/css/bootstrap-responsive.css" rel="stylesheet">
-<link href="/gallery/source/jquery.fancybox.css" rel="stylesheet">
+<link href="/gallery/css/bootstrap.css?<%= $cache_ver %>" rel="stylesheet">
+<link href="/gallery/css/style.css?<%= $cache_ver %>" rel="stylesheet">
+<link href="/gallery/css/icon-style.css?<%= $cache_ver %>" rel="stylesheet">
+<link href="/gallery/css/bootstrap-responsive.css?<%= $cache_ver %>" rel="stylesheet">
+<link href="/gallery/source/jquery.fancybox.css?<%= $cache_ver %>" rel="stylesheet">
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js?<%= $cache_ver %>"></script>
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="/gallery/img/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/gallery/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico?<%= $cache_ver %>" type="image/x-icon">
+<link rel="icon" href="/favicon.ico?<%= $cache_ver %>" type="image/x-icon">
 
 
 @@ layouts/body-load.html.ep
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/gallery/js/jquery-1.7.2.min.js"></script>
-<script src="/gallery/js/bootstrap.js"></script>
-<script src="/gallery/js/image-gallery.js"></script>
-<script src="/gallery/js/jquery.mousewheel-3.0.6.pack.js"></script>
-<script src="/gallery/source/jquery.fancybox.js"></script>
+<script src="/gallery/js/jquery-1.7.2.min.js?<%= $cache_ver %>"></script>
+<script src="/gallery/js/bootstrap.js?<%= $cache_ver %>"></script>
+<script src="/gallery/js/image-gallery.js?<%= $cache_ver %>"></script>
+<script src="/gallery/js/jquery.mousewheel-3.0.6.pack.js?<%= $cache_ver %>"></script>
+<script src="/gallery/source/jquery.fancybox.js?<%= $cache_ver %>"></script>
 
 <!-- like pinterest layout using wookmark -->
-<script src="/wookmark/jquery.wookmark.min.js"></script>
+<script src="/wookmark/jquery.wookmark.min.js?<%= $cache_ver %>"></script>
 <script type="text/javascript">
       // Call the layout function.
       $('#tiles > li').wookmark({
@@ -174,7 +183,7 @@ __DATA__
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="/"><img src="/gallery/img/logo.png" alt="<%= $project_name %>" /></a>
+      <a class="brand" href="/"><img src="/gallery/img/logo.png?<%= $cache_ver %>" alt="<%= $project_name %>" /></a>
       <div class="nav-collapse">
         <ul class="nav">
             % for my $link (@$header_links) {
