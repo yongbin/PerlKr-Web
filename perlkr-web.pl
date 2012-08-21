@@ -131,8 +131,8 @@ __DATA__
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="/gallery/img/favicon.ico?<%= $cache_ver %>"" type="image/x-icon">
-<link rel="icon" href="/favicon.ico?<%= $cache_ver %>"" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico?<%= $cache_ver %>" type="image/x-icon">
+<link rel="icon" href="/favicon.ico?<%= $cache_ver %>" type="image/x-icon">
 
 
 @@ layouts/body-load.html.ep

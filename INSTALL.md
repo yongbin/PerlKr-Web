@@ -17,10 +17,10 @@ apache 설정
 5000번 포트를 perl.kr로 연결하기 위한 아파치
 리버스 프록시 설정은 다음과 같습니다.
 
-    LoadModule proxy_module modules/mod_proxy.so
+    LoadModule proxy_module          modules/mod_proxy.so
     LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
-    LoadModule proxy_http_module modules/mod_proxy_http.so
-    LoadModule proxy_connect_module modules/mod_proxy_connect.so
+    LoadModule proxy_http_module     modules/mod_proxy_http.so
+    LoadModule proxy_connect_module  modules/mod_proxy_connect.so
     
     <IfModule mod_proxy.c>
     ProxyRequests Off
@@ -30,7 +30,7 @@ apache 설정
     </Proxy>
     
     <VirtualHost *:80>
-        ServerName       test.perl.kr
+        ServerName       perl.kr
         ProxyPass        /     http://127.0.0.1:5000/
         ProxyPassReverse /     http://127.0.0.1:5000/
         ErrorLog         /var/log/apache2/perl.kr/error_log
@@ -41,5 +41,5 @@ apache 설정
 보내므로 캐싱을 위해 폰트 관련 타입을 추가로 설정 합니다.
 
     AddType application/vnd.bw-fontobject .eot
-    AddType application/x-font-ttf .ttf
-    AddType application/x-woff .woff
+    AddType application/x-font-ttf        .ttf
+    AddType application/x-woff            .woff
