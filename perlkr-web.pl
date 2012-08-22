@@ -15,6 +15,11 @@ const my %DEFAULT_STASH => (
 # Documentation browser under "/perldoc"
 plugin 'PODRenderer';
 
+app->defaults(%DEFAULT_STASH);
+
+app->types->type('eot', 'application/vnd.bw-fontobject');
+app->types->type('ttf', 'application/x-font-ttf');
+
 get '/' => 'index';
 
 builder {
@@ -29,11 +34,8 @@ builder {
         ],
         expires => 'access plus 1 months';
 
-    app;
+    app->start;
 };
-
-app->defaults(%DEFAULT_STASH);
-app->start;
 
 __DATA__
 @@ index.html.ep
