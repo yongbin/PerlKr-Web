@@ -20,7 +20,9 @@ app->defaults(%DEFAULT_STASH);
 app->types->type('eot', 'application/vnd.bw-fontobject');
 app->types->type('ttf', 'application/x-font-ttf');
 
-get '/' => 'index';
+get '/'           => 'index';
+get '/contribute' => 'contribute';
+get '/donate'     => 'donate';
 
 builder {
     enable 'Expires',
@@ -67,6 +69,20 @@ __DATA__
     </div>
   </li>
 % }
+
+
+@@ contribute.html.ep
+% layout 'default';
+% title 'How To Contribute';
+
+How To Contribute?
+
+
+@@ donate.html.ep
+% layout 'default';
+% title 'Donate Us';
+
+How To Donate?
 
 
 @@ layouts/default.html.ep
