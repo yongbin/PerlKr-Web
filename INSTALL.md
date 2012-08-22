@@ -9,6 +9,7 @@ Perl 의존 모듈
 - Plack
 - Plack::Middleware::Expires
 - Starman
+- Text::MultiMarkdown
 
 
 apache 설정
