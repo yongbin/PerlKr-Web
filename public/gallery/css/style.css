@@ -1065,7 +1065,7 @@ span.login-checkbox > input[type='checkbox']:checked + label {
 .subpage{
     background:#fff;
     border:1px solid #ccc;
-    padding:15px;
+    padding:20px;
     font-size: 1.5em;
     line-height: 1.75em;
 }
@@ -1077,8 +1077,17 @@ span.login-checkbox > input[type='checkbox']:checked + label {
 .subpage h5,
 .subpage h6 {
     text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .subpage p{
-    padding:15px;
+    padding:10px;
+    margin: 0;
+}
+
+.subpage li{
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
