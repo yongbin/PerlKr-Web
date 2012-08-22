@@ -45,7 +45,7 @@ __DATA__
     <div class="galery">
       <div class="image-galery">
         <a class="group" rel="group1" href="<%= $link->{image} %>">
-          <img src="<%= $link->{image} %>?<%= $cache_ver %>" />
+          <img src="<%= $link->{thumbnail} %>?<%= $cache_ver %>" />
         </a>
       </div>
       <div class="count-galery">
