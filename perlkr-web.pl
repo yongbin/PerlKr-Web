@@ -114,19 +114,6 @@ How To Donate?
 
     %= include 'layouts/body-load'
   </body>
-  
-  <!-- google analytics -->
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  try {
-  var pageTracker = _gat._getTracker("UA-360858-5");
-  pageTracker._trackPageview();
-  } catch(err) {}</script>
-  <!-- google analytics -->
-  
 </html>
 
 
@@ -173,6 +160,18 @@ How To Donate?
         offset: 20,                 // Optional, the distance between grid items
         itemWidth: 280             // Optional, the width of a grid item
       });
+</script>
+
+<!-- google analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("<%= $google_analytics %>");
+    pageTracker._trackPageview();
+  } catch(err) {}
 </script>
 
 
