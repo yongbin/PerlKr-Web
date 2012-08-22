@@ -6,10 +6,17 @@ use Mojolicious::Lite;
 use Plack::Builder;
 
 use Const::Fast;
+use Text::MultiMarkdown;
+
+my $m = Text::MultiMarkdown->new(
+    tab_width     => 2,
+    use_wikilinks => 0,
+);
 
 my $config = plugin 'Config';
 const my %DEFAULT_STASH => (
     %$config,
+    m => $m,
 );
 
 # Documentation browser under "/perldoc"
@@ -20,7 +27,9 @@ app->defaults(%DEFAULT_STASH);
 app->types->type('eot', 'application/vnd.bw-fontobject');
 app->types->type('ttf', 'application/x-font-ttf');
 
-get '/' => 'index';
+get '/'           => 'index';
+get '/contribute' => 'contribute';
+get '/donate'     => 'donate';
 
 builder {
     enable 'Expires',
@@ -36,6 +45,8 @@ builder {
 
     app->start;
 };
+
+app;
 
 __DATA__
 @@ index.html.ep
@@ -69,6 +80,20 @@ __DATA__
 % }
 
 
+@@ contribute.html.ep
+% layout 'subpage';
+% title 'How To Contribute';
+
+<%== $m->markdown($page_contribute) %>
+
+
+@@ donate.html.ep
+% layout 'subpage';
+% title 'Donate Us';
+
+<%== $m->markdown($page_donate) %>
+
+
 @@ layouts/default.html.ep
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +111,9 @@ __DATA__
         <div class="row" id="wookmark">
           <ul id="tiles">
 
-            %= include 'layouts/header'
+            <li>
+              %= include 'layouts/header'
+            </li>
             <%= content %>
 
           </ul>
@@ -98,19 +125,6 @@ __DATA__
 
     %= include 'layouts/body-load'
   </body>
-  
-  <!-- google analytics -->
-  <script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-  </script>
-  <script type="text/javascript">
-  try {
-  var pageTracker = _gat._getTracker("UA-360858-5");
-  pageTracker._trackPageview();
-  } catch(err) {}</script>
-  <!-- google analytics -->
-  
 </html>
 
 
@@ -159,21 +173,31 @@ __DATA__
       });
 </script>
 
+<!-- google analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("<%= $google_analytics %>");
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+
 
 @@ layouts/header.html.ep
-<li>
-  <div id="header">
-    <div class="nav-headers">
-      <h3><%= $header_title %></h3>
-      <p> <%= $header_desc %> </p>
-    </div>
-    <ul class="nav nav-tabs nav-stacked">
-      % for my $link (@$header_links) {
-        <li><a href="<%= $link->{url} %>"><i class="icon-ok"></i> <%= $link->{title} %> </a></li>
-      % }
-    </ul>
+<div id="header">
+  <div class="nav-headers">
+    <h3><%= $header_title %></h3>
+    <p> <%= $header_desc %> </p>
   </div>
-</li>
+  <ul class="nav nav-tabs nav-stacked">
+    % for my $link (@$header_links) {
+      <li><a href="<%= $link->{url} %>"><i class="icon-ok"></i> <%= $link->{title} %> </a></li>
+    % }
+  </ul>
+</div>
 
 
 @@ layouts/footer.html.ep
@@ -270,3 +294,35 @@ __DATA__
 <div class="error-details">
   Sorry, an error has occured, Requested page not found!
 </div> <!-- /error-details -->
+
+
+@@ layouts/subpage.html.ep
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>perl.kr - <%= title %></title>
+    %= include 'layouts/head-load'
+  </head>
+
+  <body>
+    <div id="wrapper" class="clearfix">
+      %= include 'layouts/nav'
+
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            %= include 'layouts/header'
+          </div>
+          <div class="span8 subpage">
+            <%= content %>
+          </div>
+        </div> <!-- /row -->
+      </div> <!-- /container -->
+
+      %= include 'layouts/footer'
+    </div> <!-- /wrapper -->
+
+    %= include 'layouts/body-load'
+  </body>
+</html>
