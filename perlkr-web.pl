@@ -16,6 +16,10 @@ const my %DEFAULT_STASH => (
 plugin 'PODRenderer';
 
 app->defaults(%DEFAULT_STASH);
+
+app->types->type('eot', 'application/vnd.bw-fontobject');
+app->types->type('ttf', 'application/x-font-ttf');
+
 get '/' => 'index';
 
 builder {
