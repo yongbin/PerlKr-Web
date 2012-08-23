@@ -46,8 +46,6 @@ builder {
     app->start;
 };
 
-app;
-
 __DATA__
 @@ index.html.ep
 % layout 'default';
