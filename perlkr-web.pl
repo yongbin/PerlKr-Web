@@ -135,31 +135,31 @@ __DATA__
 <meta name="verify-v1" content="J4/HArGFld3FzWJ406poZ3byQKb2vhQ5kYt2Zriqh4g=" />
 
 <!-- Le styles -->
-<link href="/gallery/css/bootstrap.css?<%= $cache_ver %>" rel="stylesheet">
-<link href="/gallery/css/style.css?<%= $cache_ver %>" rel="stylesheet">
-<link href="/gallery/css/icon-style.css?<%= $cache_ver %>" rel="stylesheet">
-<link href="/gallery/css/bootstrap-responsive.css?<%= $cache_ver %>" rel="stylesheet">
-<link href="/gallery/source/jquery.fancybox.css?<%= $cache_ver %>" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/gallery/css/bootstrap.css?<%= $cache_ver %>" />
+<link type="text/css" rel="stylesheet" href="/gallery/css/style.css?<%= $cache_ver %>" />
+<link type="text/css" rel="stylesheet" href="/gallery/css/icon-style.css?<%= $cache_ver %>" />
+<link type="text/css" rel="stylesheet" href="/gallery/css/bootstrap-responsive.css?<%= $cache_ver %>" />
+<link type="text/css" rel="stylesheet" href="/gallery/source/jquery.fancybox.css?<%= $cache_ver %>" />
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js?<%= $cache_ver %>"></script>
+  <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js?<%= $cache_ver %>"></script>
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="/favicon.ico?<%= $cache_ver %>" type="image/x-icon">
-<link rel="icon" href="/favicon.ico?<%= $cache_ver %>" type="image/x-icon">
+<link type="image/x-icon" rel="shortcut icon" href="/favicon.ico?<%= $cache_ver %>" />
+<link type="image/x-icon" rel="icon" href="/favicon.ico?<%= $cache_ver %>" />
 
 
 @@ layouts/body-load.html.ep
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="/gallery/js/jquery-1.7.2.min.js?<%= $cache_ver %>"></script>
-<script src="/gallery/js/bootstrap.js?<%= $cache_ver %>"></script>
-<script src="/gallery/js/image-gallery.js?<%= $cache_ver %>"></script>
-<script src="/gallery/js/jquery.mousewheel-3.0.6.pack.js?<%= $cache_ver %>"></script>
-<script src="/gallery/source/jquery.fancybox.js?<%= $cache_ver %>"></script>
+<script type="text/javascript" src="/gallery/js/jquery-1.7.2.min.js?<%= $cache_ver %>"></script>
+<script type="text/javascript" src="/gallery/js/bootstrap.js?<%= $cache_ver %>"></script>
+<script type="text/javascript" src="/gallery/js/image-gallery.js?<%= $cache_ver %>"></script>
+<script type="text/javascript" src="/gallery/js/jquery.mousewheel-3.0.6.pack.js?<%= $cache_ver %>"></script>
+<script type="text/javascript" src="/gallery/source/jquery.fancybox.js?<%= $cache_ver %>"></script>
 
 <!-- like pinterest layout using wookmark -->
 <script src="/wookmark/jquery.wookmark.min.js?<%= $cache_ver %>"></script>
@@ -168,7 +168,7 @@ __DATA__
       $('#tiles > li').wookmark({
         autoResize: true,          // This will auto-update the layout when the browser window is resized.
         container: $('#wookmark'), // Optional, used for some extra CSS styling
-        offset: 20,                 // Optional, the distance between grid items
+        offset: 20,                // Optional, the distance between grid items
         itemWidth: 280             // Optional, the width of a grid item
       });
 </script>
