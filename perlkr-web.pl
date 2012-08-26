@@ -33,6 +33,7 @@ get '/donate'     => 'donate';
 
 my @content_types = (
     'application/javascript',
+    'application/x-javascript',
     'application/vnd.bw-fontobject',    # eot
     'application/x-font-ttf',           # ttf
     'application/x-woff',               # woff
