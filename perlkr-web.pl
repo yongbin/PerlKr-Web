@@ -31,17 +31,44 @@ get '/'           => 'index';
 get '/contribute' => 'contribute';
 get '/donate'     => 'donate';
 
+my @content_types = (
+    'application/javascript',
+    'application/vnd.bw-fontobject',    # eot
+    'application/x-font-ttf',           # ttf
+    'application/x-woff',               # woff
+    'text/css',
+);
+
 builder {
     enable 'Expires',
         content_type => [
-            'application/javascript',
-            'application/vnd.bw-fontobject',  # eot
-            'application/x-font-ttf',         # ttf
-            'application/x-woff',             # woff
-            'text/css',
+            @content_types,
             qr{^image/},
         ],
         expires => 'access plus 1 months';
+
+    enable sub {
+        my $app = shift;
+        sub {
+            my $env = shift;
+            my $ua = $env->{HTTP_USER_AGENT} || '';
+            # Netscape has some problem
+            $env->{"psgix.compress-only-text/html"} = 1 if $ua =~ m!^Mozilla/4!;
+            # Netscape 4.06-4.08 have some more problems
+             $env->{"psgix.no-compress"} = 1 if $ua =~ m!^Mozilla/4\.0[678]!;
+            # MSIE (7|8) masquerades as Netscape, but it is fine
+            if ( $ua =~ m!\bMSIE (?:7|8)! ) {
+                $env->{"psgix.no-compress"} = 0;
+                $env->{"psgix.compress-only-text/html"} = 0;
+            }
+            $app->($env);
+        }
+    };
+
+    enable "Deflater",
+      content_type =>
+      [ @content_types, ],
+      vary_user_agent => 1;
 
     app->start;
 };
