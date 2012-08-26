@@ -66,8 +66,8 @@ builder {
     };
 
     enable "Deflater",
-      content_type =>
-      [ @content_types, ],
+      content_type => [ @content_types, 'text/html', ],
+
       vary_user_agent => 1;
 
     app->start;
